@@ -6,15 +6,19 @@
   --font-display: "Space Grotesk", sans-serif;
   
   --color-primary: #f36f56; /* The signature orange from the HTML */
+  --color-primary-light: #ff8c7a; /* A lighter version for dark backgrounds */
   --color-accent: #6b21a8;  /* The purple used for icons and labels */
   --color-secondary: #1e3a8a; /* The deep blue used for headings */
   --color-surface: #ffffff;
-  --color-body: #fdfdfd;
+  --color-body: transparent;
 }
 
 @layer base {
   body {
-    @apply font-sans text-slate-900 bg-body antialiased;
+    @apply font-sans text-slate-900 antialiased;
+    background: linear-gradient(135deg, #4c1d95 0%, #6b21a8 40%, #fdfdfd 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   
   h1, h2, h3, h4 {

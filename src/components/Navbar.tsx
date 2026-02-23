@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-primary/20 group-hover:rotate-6 transition-transform">GA</div>
           <div className="flex flex-col">
-            <span className="font-display font-black text-xl tracking-tight leading-none">Grafikus Akadémia</span>
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Creative Learning</span>
+            <span className="font-display font-black text-xl tracking-tight leading-none text-white">Grafikus Akadémia</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-light">Creative Learning</span>
           </div>
         </div>
         
