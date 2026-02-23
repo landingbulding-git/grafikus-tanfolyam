@@ -39,7 +39,12 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-8 text-slate-900">
-            Szerezz államilag elismert <span className="text-primary relative inline-block highlight-underline">grafikus szakmát</span> <span className="text-primary relative inline-block highlight-underline">10 hónap alatt</span>, és <span className="relative inline-block highlight-underline">helyezkedj el magabiztosan</span> az álomállásodban!
+            Szerezz államilag elismert <span className="text-primary">grafikus szakmát</span> <span className="text-primary">10 hónap alatt</span>, és <span className="relative inline-block">
+              helyezkedj el magabiztosan
+              <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/80" viewBox="0 0 318 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9C56.3333 4.66667 175.8 -2.4 315 9" stroke="currentColor" strokeWidth="6" strokeLinecap="round"/>
+              </svg>
+            </span> az álomállásodban!
           </h1>
           
           <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
@@ -79,11 +84,11 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative"
         >
-          <div className="relative z-10">
+          <div className="relative z-10 flex justify-center">
             <img 
               src="https://img.freepik.com/free-photo/female-logo-designer-working-her-office-graphic-tablet_23-2149119207.jpg?t=st=1771864769~exp=1771868369~hmac=6000edfa533b25499c47b14b5864974a57a19fa5800e97493526b6ea4f309f40&w=1480" 
               alt="Female logo designer working in her office" 
-              className="rounded-[3rem] shadow-2xl w-full aspect-square object-cover"
+              className="rounded-[3rem] shadow-2xl w-[70%] aspect-square object-cover"
               referrerPolicy="no-referrer"
             />
             
