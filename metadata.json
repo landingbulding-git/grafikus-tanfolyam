@@ -1,1 +1,5 @@
-Permission denied
+{
+  "name": "Grafikus Akadémia - Művészeti Grafikus Képzés",
+  "description": "Szerezz államilag elismert Művészeti Grafikus szakmát 10 hónap alatt, és építs szabadúszó karriert a kreativitásodból!",
+  "requestFramePermissions": []
+}
