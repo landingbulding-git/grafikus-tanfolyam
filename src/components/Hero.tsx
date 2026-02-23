@@ -37,12 +37,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-3xl md:text-5xl lg:text-5xl font-extrabold leading-[1.2] mb-5 text-white tracking-tight text-balance">
-            Szerezz államilag elismert <span className="text-primary-light">grafikus szakmát</span> <span className="text-primary-light">10 hónap alatt</span>, és&nbsp;<span className="relative inline-block">
-              helyezkedj el magabiztosan
-              <svg className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-2 md:h-3 text-primary/80" viewBox="0 0 318 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 9C56.3333 4.66667 175.8 -2.4 315 9" stroke="currentColor" strokeWidth="6" strokeLinecap="round"/>
-              </svg>
-            </span> az álomállásodban!
+            Szerezz államilag elismert <span className="text-primary-light">grafikus szakmát</span> <span className="text-primary-light">10 hónap alatt</span>, és&nbsp;<span className="underline decoration-primary/80 decoration-[6px] md:decoration-[8px] underline-offset-[4px] md:underline-offset-[8px] decoration-skip-ink-none">helyezkedj el magabiztosan</span> az álomállásodban!
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-6 leading-relaxed max-w-xl text-balance">
