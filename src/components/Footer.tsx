@@ -2,24 +2,21 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#007b8a] text-white/70 py-20 px-6">
+    <footer className="bg-transparent text-white/60 py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-8 text-white">
-              <div className="flex gap-1">
-                <div className="w-2 h-2 bg-white rounded-full" />
-                <div className="w-2 h-2 bg-white/50 rounded-full" />
-              </div>
-              <span className="font-display font-black text-2xl tracking-tighter">Portfolio</span>
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20">GA</div>
+              <span className="font-display font-black text-2xl tracking-tighter">Grafikus Akadémia</span>
             </div>
             <p className="max-w-sm mb-10 leading-relaxed text-sm">
-              CreativePeople Digital Agency is a customer-centric digital marketing company. We shape our internet marketing services.
+              Szerezz államilag elismert grafikus szakmát 10 hónap alatt, és építs szabadúszó karriert a kreativitásodból élő-online óráinkon!
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#007b8a] transition-all"><Facebook size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#007b8a] transition-all"><Twitter size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#007b8a] transition-all"><Instagram size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-all text-white"><Facebook size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-all text-white"><Linkedin size={18} /></a>
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-all text-white"><Instagram size={18} /></a>
             </div>
           </div>
           
