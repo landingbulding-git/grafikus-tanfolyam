@@ -3,7 +3,7 @@ import { Star, CheckCircle, ShieldCheck, CreditCard, Users } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden bg-body bg-dots">
+    <section className="relative pt-28 md:pt-32 pb-12 md:pb-20 overflow-hidden bg-body bg-dots">
       {/* Playful Shapes */}
       <div className="shape-blob w-96 h-96 bg-primary top-0 right-0 -translate-y-1/2 translate-x-1/4" />
       <div className="shape-blob w-80 h-80 bg-secondary bottom-0 left-0 translate-y-1/4 -translate-x-1/4" />
@@ -18,13 +18,13 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           {/* Trust Stack Mini */}
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
                 <img 
                   key={i}
                   src={`https://picsum.photos/seed/${i + 10}/48/48`} 
-                  className="w-10 h-10 rounded-full border-4 border-white shadow-sm"
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 md:border-4 border-white shadow-sm"
                   alt="User"
                   referrerPolicy="no-referrer"
                 />
@@ -32,36 +32,36 @@ export default function Hero() {
             </div>
             <div className="flex flex-col">
               <div className="flex text-amber-400">
-                {[1, 2, 3, 4, 5].map((i) => <Star key={i} size={16} fill="currentColor" />)}
+                {[1, 2, 3, 4, 5].map((i) => <Star key={i} size={14} className="md:w-4 md:h-4" fill="currentColor" />)}
               </div>
-              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">4.9/5 (500+ végzett)</span>
+              <span className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">4.9/5 (500+ végzett)</span>
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-8 text-slate-900">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 text-slate-900">
             Szerezz államilag elismert <span className="text-primary">grafikus szakmát</span> <span className="text-primary">10 hónap alatt</span>, és <span className="relative inline-block">
               helyezkedj el magabiztosan
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/80" viewBox="0 0 318 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-2 md:h-3 text-primary/80" viewBox="0 0 318 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 9C56.3333 4.66667 175.8 -2.4 315 9" stroke="currentColor" strokeWidth="6" strokeLinecap="round"/>
               </svg>
             </span> az álomállásodban!
           </h1>
           
-          <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
+          <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
             Unod a bizonytalan állásokat? Sajátítsd el a Photoshop, Illustrator és AI tervezés mesterfogásait élő-online óráinkon, és építs szabadúszó karriert a kreativitásodból!
           </p>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             <motion.a 
               href="#jelentkezes"
               whileHover={{ scale: 1.02, y: -4 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-primary inline-flex items-center justify-center text-center text-xl max-w-md"
+              className="btn-primary inline-flex items-center justify-center text-center text-lg md:text-xl max-w-md py-3 md:py-4"
             >
               Kérem a tájékoztatót!
             </motion.a>
 
-            <div className="flex flex-wrap items-center gap-y-4 gap-x-8 text-[10px] font-black uppercase tracking-widest text-slate-400">
+            <div className="flex flex-wrap items-center gap-y-3 gap-x-6 text-[10px] md:text-[10px] font-black uppercase tracking-widest text-slate-400">
               <div className="flex items-center gap-2">
                 <Users size={14} className="text-primary" />
                 <span>Nincs elköteleződés</span>
