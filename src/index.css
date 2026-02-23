@@ -15,10 +15,19 @@
 
 @layer base {
   body {
-    @apply font-sans text-slate-900 antialiased;
+    @apply font-sans text-slate-900 antialiased relative min-h-screen;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(135deg, #4c1d95 0%, #6b21a8 40%, #fdfdfd 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    z-index: -1;
+    pointer-events: none;
   }
   
   h1, h2, h3, h4 {

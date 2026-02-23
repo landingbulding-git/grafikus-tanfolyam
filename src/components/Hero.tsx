@@ -14,9 +14,10 @@ export default function Hero() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
+          className="text-center md:text-left flex flex-col items-center md:items-start"
         >
           {/* Trust Stack Mini */}
-          <div className="flex items-center gap-4 mb-5">
+          <div className="flex items-center justify-center md:justify-start gap-4 mb-5">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
                 <img 
@@ -28,7 +29,7 @@ export default function Hero() {
                 />
               ))}
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-start">
               <div className="flex text-amber-400">
                 {[1, 2, 3, 4, 5].map((i) => <Star key={i} size={14} className="md:w-4 md:h-4" fill="currentColor" />)}
               </div>
@@ -44,17 +45,17 @@ export default function Hero() {
             Unod a bizonytalan állásokat? Sajátítsd el a Photoshop, Illustrator és AI tervezés mesterfogásait élő-online óráinkon, és építs szabadúszó karriert a kreativitásodból!
           </p>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col items-center md:items-start gap-6">
             <motion.a 
               href="#jelentkezes"
               whileHover={{ scale: 1.02, y: -4 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-primary inline-flex items-center justify-center text-center text-lg md:text-xl max-w-md py-3 md:py-4"
+              className="btn-primary inline-flex items-center justify-center text-center text-lg md:text-xl w-full md:w-auto max-w-md py-3 md:py-4"
             >
               Kérem a tájékoztatót!
             </motion.a>
 
-            <div className="flex flex-wrap items-center gap-y-3 gap-x-6 text-[10px] md:text-[10px] font-black uppercase tracking-widest text-white/40">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-y-3 gap-x-6 text-[10px] md:text-[10px] font-black uppercase tracking-widest text-white/40">
               <div className="flex items-center gap-2">
                 <Users size={14} className="text-primary-light" />
                 <span>Nincs elköteleződés</span>
@@ -75,21 +76,21 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative"
+          className="relative flex flex-col items-center"
         >
-          <div className="relative z-10 flex justify-center">
+          <div className="relative z-10 flex justify-center w-full">
             <img 
               src="https://img.freepik.com/free-photo/female-logo-designer-working-her-office-graphic-tablet_23-2149119207.jpg?t=st=1771864769~exp=1771868369~hmac=6000edfa533b25499c47b14b5864974a57a19fa5800e97493526b6ea4f309f40&w=1480" 
               alt="Female logo designer working in her office" 
-              className="rounded-[3rem] shadow-2xl w-[70%] aspect-square object-cover"
+              className="rounded-[3rem] shadow-2xl w-[85%] md:w-[70%] aspect-square object-cover"
               referrerPolicy="no-referrer"
             />
             
-            {/* Floating Labels */}
+            {/* Desktop Floating Labels */}
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-50"
+              className="hidden md:flex absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-xl items-center gap-3 border border-slate-50 text-slate-900"
             >
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <CheckCircle size={16} />
@@ -100,7 +101,7 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-1/4 -right-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-50"
+              className="hidden md:flex absolute top-1/4 -right-10 bg-white p-4 rounded-2xl shadow-xl items-center gap-3 border border-slate-50 text-slate-900"
             >
               <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
                 <CheckCircle size={16} />
@@ -111,7 +112,7 @@ export default function Hero() {
             <motion.div 
               animate={{ x: [0, 10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-10 -left-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-50"
+              className="hidden md:flex absolute bottom-10 -left-10 bg-white p-4 rounded-2xl shadow-xl items-center gap-3 border border-slate-50 text-slate-900"
             >
               <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                 <CheckCircle size={16} />
@@ -122,7 +123,7 @@ export default function Hero() {
             <motion.div 
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-              className="absolute -bottom-6 right-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-50"
+              className="hidden md:flex absolute -bottom-6 right-10 bg-white p-4 rounded-2xl shadow-xl items-center gap-3 border border-slate-50 text-slate-900"
             >
               <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                 <CheckCircle size={16} />
@@ -131,15 +132,43 @@ export default function Hero() {
             </motion.div>
           </div>
 
+          {/* Mobile Labels (Below Image) */}
+          <div className="flex md:hidden flex-col gap-3 mt-8 w-[85%]">
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-3 text-white">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <CheckCircle size={16} />
+              </div>
+              <span className="font-bold text-sm">100% Gyakorlati oktatás</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-3 text-white">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <CheckCircle size={16} />
+              </div>
+              <span className="font-bold text-sm">Élő-online mentorálás</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-3 text-white">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <CheckCircle size={16} />
+              </div>
+              <span className="font-bold text-sm">Havi 37.000 Ft-tól</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-3 text-white">
+              <div className="w-8 h-8 rounded-full bg-emerald-400/20 flex items-center justify-center text-emerald-400">
+                <CheckCircle size={16} />
+              </div>
+              <span className="font-bold text-sm">Államilag elismert</span>
+            </div>
+          </div>
+
           {/* Decorative elements behind image */}
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl -z-10 hidden md:block" />
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10 hidden md:block" />
           
           {/* Playful Accent */}
           <div className="absolute -right-4 top-1/2 -translate-y-1/2 translate-x-full hidden xl:block">
             <div className="flex flex-col items-center gap-2">
               <div className="w-px h-20 bg-gradient-to-b from-transparent via-slate-200 to-transparent" />
-              <span className="[writing-mode:vertical-lr] text-[10px] font-black uppercase tracking-[0.3em] text-slate-300">Scroll Down</span>
+              <span className="[writing-mode:vertical-lr] text-[10px] font-black uppercase tracking-[0.3em] text-white/50">Scroll Down</span>
             </div>
           </div>
         </motion.div>
